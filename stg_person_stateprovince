@@ -1,0 +1,16 @@
+with  
+    source_data as (
+        select
+            stateprovinceid 
+            , name
+            , territoryid 
+            , countryregioncode 
+            -- , stateprovincecode 
+            --, isonlystateprovinceflag 
+            --, rowguid
+            --, modifieddate   
+    
+        from {{ source('AdventureWorks_Kondado', 'person_stateprovince') }}
+ )
+select *
+from source_data
