@@ -1,0 +1,10 @@
+with 
+    source_data as (
+        select
+            salesreasonid 
+            , name
+
+        from {{ source('AdventureWorks_Kondado', 'sales_salesreason') }}
+ )
+select *
+from source_data
